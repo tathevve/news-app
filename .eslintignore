@@ -1,0 +1,7 @@
+# Ignore the Metro bundler config file
+metro.config.js
+
+# Ignore Jest configuration file
+jest.config.js
+
+.eslintrs.js
