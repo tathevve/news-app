@@ -1,79 +1,69 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# News App
 
-# Getting Started
+This is a **news app** available for both **iOS** and **Android** platforms. It provides an infinite scrolling loop of news articles, allowing users to stay up to date with the latest news from around the world.
 
-> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Task Overview
 
-## Step 1: Start the Metro Server
+This app was developed as a test task to create a news reader mobile application using React Native. The task involved building a news app that allows users to browse, search, and save articles for offline use.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### Task Details
 
-To start Metro, run the following command from the _root_ of your React Native project:
+1. **Display News Articles**: The app displays a list of news articles fetched from The Guardian, with each item showing a thumbnail image, title, and publication date.
+2. **Search Functionality**: Users can search for articles using a search bar that filters articles by keywords.
+3. **Infinite Scrolling**: The homepage shows an infinite scrolling list of articles, with an option to switch between a list view and a Pinterest-like grid view.
+4. **Detailed Article View**: Each article has a detailed view showing the title, body text, publication date, and any relevant images.
+5. **Offline Mode**: Users can save articles for offline use. These articles can be viewed without an internet connection. The app shows a message when offline.
+6. **Error Handling**: The app handles network errors gracefully, displaying appropriate error messages when something goes wrong.
 
-```bash
-# using npm
-npm start
+### API Integration
 
-# OR using Yarn
-yarn start
+The app integrates with two APIs:
+- **The Guardian API**: To fetch the latest news articles. Documentation: [The Guardian API Documentation](https://open-platform.theguardian.com/documentation/search)
+
+### Environment Variables
+
+The app uses a `.env` file to store sensitive information, such as API keys.
+
+- **API_KEY**: Your API key used to fetch news from The Guardian.
+
+Ensure you have the `.env` file in the project root, and that it contains the following line:
+
+```
+API_KEY=your_api_key_here
 ```
 
-## Step 2: Start your Application
+### Code Quality and Formatting
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+This project includes ESLint for linting and Prettier for code formatting to ensure consistent code quality.
 
-### For Android
+### Available Scripts
 
-```bash
-# using npm
-npm run android
+In the project directory, you can run the following scripts:
 
-# OR using Yarn
-yarn android
-```
+- **Lint the code**:
+  - `npm run lint` or `yarn lint`
+  - This will check for any linting errors in your code.
+  
+- **Automatically fix linting issues**:
+  - `npm run lint:fix` or `yarn lint:fix`
+  - This will attempt to fix any linting errors automatically.
+  
+- **Format the code**:
+  - `npm run format` or `yarn format`
+  - This will format the codebase using Prettier.
+  
+- **Check if code is formatted correctly**:
+  - `npm run format:check` or `yarn format:check`
+  - This will check if the files are correctly formatted.
 
-### For iOS
+## Screens Overview
 
-```bash
-# using npm
-npm run ios
+- **Discover Screen**: Showcases an infinite scroll of the latest news articles, available in both list and grid views. Users can switch between views and continue browsing as new articles load automatically.
+- **Detail Screen**: Provides an in-depth view of the selected news article, including the title, body text, publication date, and images.
+- **Offline Mode**: Lets users access and read articles that have been saved for offline use, even when the app is not connected to the internet.
 
-# OR using Yarn
-yarn ios
-```
+### Key Features:
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- **Infinite Scrolling**: Effortlessly load more articles as you scroll down the Discover Screen.
+- **Save Functionality**: Bookmark articles to read later, ensuring that you never miss out on important news.
+- **Offline Mode**: Access your saved articles anytime, regardless of your internet connection status.
